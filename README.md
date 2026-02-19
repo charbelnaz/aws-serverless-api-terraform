@@ -30,3 +30,11 @@ HTTP 200 with JSON hello message.
 ## Cleanup
 
 terraform destroy
+
+## Example
+After `terraform apply`:
+
+```bash
+API_URL=$(terraform output -raw api_base_url)
+curl -i "$API_URL/hello"
+
